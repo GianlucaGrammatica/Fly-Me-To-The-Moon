@@ -5,58 +5,54 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp"  tools:context=".MainActivity">
 
-<LinearLayout
-    android:id="@+id/linear_layout_values"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toTopOf="@+id/image_compass"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_chainStyle="spread"
-    >
-
-    <TextView
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linear_layout_values"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_view_magnetic_declination"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textStyle="bold"
-        />
+        android:orientation="horizontal" app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view_heading"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textStyle="bold"
-        />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_magnetic_declination"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view_true_heading"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textStyle="bold"
-        />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_heading"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_true_heading"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
 
-</LinearLayout>
+    </LinearLayout>
+
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/image_compass"
+        android:layout_height="0dp" android:id="@+id/image_compass"
         android:adjustViewBounds="true"
         android:src="@drawable/compass"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBaseline_toBottomOf="@id/linear_layout_values"
-        app:layout_constraintWidth_percent="0.8"/>
+        app:layout_constraintWidth_percent="0.8"
+
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_values" app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
