@@ -2,7 +2,7 @@ package com.abistudy.flymetothemoon;
 
 public class CompassHelper {
 
-    public static final float ALPHA = 0.15f;
+    public static final float ALPHA = 0.01f;
 
     public static float[] lowPassFilter(float[] input, float[] output) {
         if (output == null) return input;

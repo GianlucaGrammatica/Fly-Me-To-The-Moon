@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
             float headingMagnetic = (float) (Math.toDegrees(azimuthInRadians) + 360) % 360;
 
-            float headingTrue = headingMagnetic + magneticDeclination; // Semplice somma
+            float headingTrue = headingMagnetic + magneticDeclination;
 
             RotateAnimation rotateAnim = new RotateAnimation(
                     currentDegree,
